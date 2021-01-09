@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#000000</color>
+    <color name="colorWhite">#fdfdfd</color>
+    <color name="colorDarkOrangeFormerColorAccent">#FF5722</color>
+    <color name="colorFormerColorPrimary">#000000</color>
+    <color name="colorFormerPrimaryDark">#fff17a0a</color>
+    <color name="onebigshop_standard_grey">#C9CACA</color>
+    <color name="oneBigShop_grey_2">#6A6A6A</color>
+</resources>

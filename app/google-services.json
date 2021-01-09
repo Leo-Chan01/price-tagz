@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "558997578903",
+    "firebase_url": "https://oneshop-e38a1.firebaseio.com",
+    "project_id": "oneshop-e38a1",
+    "storage_bucket": "oneshop-e38a1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558997578903:android:a3d8d9fab6a5100247b5d2",
+        "android_client_info": {
+          "package_name": "com.example.oneshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "558997578903-8q4ab5i2reulj6ppajvianuv3p6hp96f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.oneshop",
+            "certificate_hash": "5d566c9149664924b77fead5c6284b43ffc324d9"
+          }
+        },
+        {
+          "client_id": "558997578903-v400vttuaak9mjnn2v1hcpkrtt09m34u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkYCtw1K7pmSXp9ViNrtLcw7J-QxR94-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "558997578903-v400vttuaak9mjnn2v1hcpkrtt09m34u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

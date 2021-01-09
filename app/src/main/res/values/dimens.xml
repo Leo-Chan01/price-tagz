@@ -1,0 +1,25 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="standard_spacing">8dp</dimen>
+    <dimen name="standard_text">12sp</dimen>
+    <dimen name="standard_text_profile">14sp</dimen>
+    <dimen name="standard_corner_radius">6dp</dimen>
+    <dimen name="standard_content_padding">8dp</dimen>
+    <dimen name="standard_card_elevation">4dp</dimen>
+    <dimen name="bigshop_med_text">24</dimen>
+    <dimen name="bigshop_padding_1">16dp</dimen>
+    <dimen name="bigshop_medium_txt">24sp</dimen>
+    <dimen name="bigshop_large_corner_radius">12dp</dimen>
+    <dimen name="bigshop_padding_2">4dp</dimen>
+    <dimen name="bigshop_medium_txt_2">18sp</dimen>
+    <dimen name="bigshop_small_txt_1">16sp</dimen>
+    <dimen name="bigshop_large_text_1">30sp</dimen>
+    <dimen name="huge_content_padding_1">24dp</dimen>
+    <dimen name="bigshop_small_layout_margin1">2dp</dimen>
+    <dimen name="bigshop_small_layout_margin2" >8dp</dimen>
+    <dimen name="bigshop_small_card_elevation">2dp</dimen>
+    <dimen name="bigshop_fading_edge_small_1">2dp</dimen>
+    <dimen name="bigshop_standard_corner_radius_2">10dp</dimen>
+    <dimen name="bigshop_standard_corner_radius_3">14dp</dimen>
+    <dimen name="bigshop_standard_corner_radius_4">18dp</dimen>
+</resources>

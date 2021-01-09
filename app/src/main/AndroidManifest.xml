@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.oneshop">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_oneshoplauchericon"
+        android:label="OneBigShop"
+        android:roundIcon="@drawable/ic_oneshoplauchericon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".DashBoardActivity"></activity>
+        <activity android:name=".EditAddActivity" />
+        <activity
+            android:name=".DealDisplayActivity"
+            android:label="@string/deals_header">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

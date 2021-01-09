@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditAddActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_user_note"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:clipToPadding="false"
+        app:cardBackgroundColor="@color/colorFormerPrimaryDark"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:contentPaddingLeft="@dimen/bigshop_padding_1"
+        app:contentPaddingRight="@dimen/bigshop_padding_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_editdealuser_note"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/bigshop_small_layout_margin2"
+            android:text="@string/str_res_text_editdealnote"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/editText_deal_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/cardview_user_note"
+        app:layout_constraintStart_toStartOf="@+id/cardview_user_note"
+        app:layout_constraintTop_toBottomOf="@+id/cardview_user_note" />
+
+    <EditText
+        android:id="@+id/editText_deal_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/price"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editText_deal_name"
+        app:layout_constraintStart_toStartOf="@+id/editText_deal_name"
+        app:layout_constraintTop_toBottomOf="@+id/editText_deal_name"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/editText_deal_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/description"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/editText_deal_price"
+        app:layout_constraintStart_toStartOf="@+id/editText_deal_price"
+        app:layout_constraintTop_toBottomOf="@+id/editText_deal_price"
+        android:autofillHints="" />
+
+    <ImageButton
+        android:id="@+id/imageButton_addimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/add_photo"
+        android:backgroundTint="@color/onebigshop_standard_grey"
+        android:contentDescription="@string/desc_add_image"
+        android:hapticFeedbackEnabled="false"
+        app:layout_constraintStart_toStartOf="@+id/editText_deal_description"
+        app:layout_constraintTop_toBottomOf="@+id/editText_deal_description" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_addit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorWhite"
+        android:clickable="true"
+        android:contentDescription="@string/desc_add"
+        android:focusable="true"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/editText_deal_description"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_addimage"
+        app:srcCompat="@drawable/add_new_button" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/desc_add"
+        android:focusable="true"
+        app:backgroundTint="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="@+id/fab_addit"
+        app:layout_constraintTop_toBottomOf="@+id/fab_addit"
+        app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_feedback"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:clipToPadding="true"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="@dimen/bigshop_standard_corner_radius_4"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="@dimen/standard_content_padding"
+        app:contentPaddingLeft="@dimen/huge_content_padding_1"
+        app:contentPaddingRight="@dimen/huge_content_padding_1"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_done"
+        app:layout_constraintEnd_toStartOf="@+id/fab_done"
+        app:layout_constraintStart_toStartOf="@+id/imageButton_addimage"
+        app:layout_constraintTop_toTopOf="@+id/fab_done">
+
+        <TextView
+            android:id="@+id/text_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="true"
+            android:text="@string/deals_empy_notice"
+            android:textColor="@color/colorFormerPrimaryDark"
+            android:textStyle="italic" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
