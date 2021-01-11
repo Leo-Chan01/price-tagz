@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview_user_note"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -53,13 +53,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/price"
-        android:inputType="textPersonName"
+        android:inputType="number|textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/editText_deal_name"
         app:layout_constraintStart_toStartOf="@+id/editText_deal_name"
-        app:layout_constraintTop_toBottomOf="@+id/editText_deal_name"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_deal_name" />
 
     <EditText
         android:id="@+id/editText_deal_description"

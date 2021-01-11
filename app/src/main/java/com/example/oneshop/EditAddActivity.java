@@ -1,9 +1,5 @@
 package com.example.oneshop;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -11,7 +7,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -44,13 +43,14 @@ public class EditAddActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //get the string values on click
+
                 String nameData = editTextDealName.getText().toString();
                 String priceData = editTextDealPrice.getText().toString();
                 String descriptionData = editTextDealDescription.getText().toString();
 
-                editTextDealName.setText("");
-                editTextDealPrice.setText("");
-                editTextDealDescription.setText("");
+                editTextDealName.setText(null);
+                editTextDealPrice.setText(null);
+                editTextDealDescription.setText(null);
 
                 editTextDealName.setFocusable(true);
 
@@ -59,13 +59,17 @@ public class EditAddActivity extends AppCompatActivity {
 
                 mStockInfos.add(stockInfo);
 
-//                AllDataStore.getInstance().setStockInfos(mStockInfos);
-
                 int currentNumber = mStockInfos.size();
+                int lastIndex = mStockInfos.size() - 1;
+
+                if (editTextDealName == null) {
+                    mStockInfos.remove(lastIndex);
+                }
+
                 String feedBackText = Integer.toString(currentNumber);
-                if(currentNumber == 1){
+                if (currentNumber == 1) {
                     textFeedback.setText(new StringBuilder().append(feedBackText).append(" ").append(getString(R.string.added_deal_feedback)).toString());
-                }else if (currentNumber > 1){
+                } else if (currentNumber > 1) {
                     textFeedback.setText(new StringBuilder().append(feedBackText).append(" ").append(getString(R.string.added_deals_feedback)).toString());
                 }
             }
@@ -79,13 +83,12 @@ public class EditAddActivity extends AppCompatActivity {
                 AllDataStore.getInstance().setStockInfos(mStockInfos);
                 mFreshStockInfoList = AllDataStore.getInstance().getStockInfos();
                 Intent submitDealIntent = new Intent(EditAddActivity.this, DealDisplayActivity.class);
-                submitDealIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|submitDealIntent.FLAG_ACTIVITY_CLEAR_TASK);
+                submitDealIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 submitDealIntent.putParcelableArrayListExtra(Intent.EXTRA_TEXT, (ArrayList<? extends Parcelable>) mFreshStockInfoList);
                 //start the activity
                 startActivity(submitDealIntent);
             }
         });
-
     }
 
     @Override
