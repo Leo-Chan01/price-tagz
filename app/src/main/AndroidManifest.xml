@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.oneshop">
+    package="com.raym.oneshop">
 
     <application
         android:allowBackup="true"
@@ -9,10 +9,10 @@
         android:roundIcon="@drawable/ic_onebigshopasset_1xhdpi"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DashBoardActivity"></activity>
-        <activity android:name=".EditAddActivity" />
+        <activity android:name="com.raym.oneshop.DashBoardActivity"></activity>
+        <activity android:name="com.raym.oneshop.EditAddActivity" />
         <activity
-            android:name=".DealDisplayActivity"
+            android:name="com.raym.oneshop.DealDisplayActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
