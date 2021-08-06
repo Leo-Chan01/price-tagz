@@ -1,4 +1,4 @@
-package com.raym.oneshop;
+package com.raym.oneshop.models;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;

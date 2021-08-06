@@ -1,4 +1,4 @@
-package com.raym.oneshop;
+package com.raym.oneshop.models;
 
 import java.util.ArrayList;
 import java.util.List;

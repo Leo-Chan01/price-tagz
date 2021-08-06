@@ -1,4 +1,4 @@
-package com.raym.oneshop;
+package com.raym.oneshop.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;

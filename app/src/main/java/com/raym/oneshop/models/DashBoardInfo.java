@@ -1,4 +1,4 @@
-package com.raym.oneshop;
+package com.raym.oneshop.models;
 
 public class DashBoardInfo {
     private String userName;

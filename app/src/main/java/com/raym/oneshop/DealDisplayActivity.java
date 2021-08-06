@@ -18,6 +18,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.raym.oneshop.models.AllDataStore;
+import com.raym.oneshop.models.DealDisplayAdapter;
+import com.raym.oneshop.models.FirebaseUtil;
+import com.raym.oneshop.models.StockInfo;
 
 import java.util.ArrayList;
 import java.util.List;
