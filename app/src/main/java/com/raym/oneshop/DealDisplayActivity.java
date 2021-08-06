@@ -24,7 +24,7 @@ import java.util.List;
 
 public class DealDisplayActivity extends AppCompatActivity {
 
-    private static final List<StockInfo> PREVIOUS_STOCK_DATASET = new ArrayList<>();
+    private static final  List<StockInfo> PREVIOUS_STOCK_DATASET = new ArrayList<>();
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mDatabaseReference;
     private RecyclerView mRecyclerView;
@@ -47,7 +47,7 @@ public class DealDisplayActivity extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.rv_deal_display);
         mRecyclerView.setHasFixedSize(true);
 
-        if (mAdapter == null) {
+        if(mAdapter == null){
             mOriginalStockInfoList = AllDataStore.getInstance().getStockInfos();
             textNotice.setVisibility(View.VISIBLE);
             nothingHereIcon.setVisibility(View.VISIBLE);
@@ -56,19 +56,19 @@ public class DealDisplayActivity extends AppCompatActivity {
         Intent submitDealIntent = getIntent();
 
         //to check if this intent has the extra data needed
-        if (submitDealIntent.hasExtra(Intent.EXTRA_TEXT)) {
+        if (submitDealIntent.hasExtra(Intent.EXTRA_TEXT)){
             mStocks = submitDealIntent.getParcelableArrayListExtra(Intent.EXTRA_TEXT);
 
 //            mOriginalStockInfoList.addAll(mStocks);
 
             mAdapter = new DealDisplayAdapter(mStocks);
-            if (mAdapter == null) {
+            if(mAdapter == null){
                 textNotice.setVisibility(View.VISIBLE);
                 nothingHereIcon.setVisibility(View.VISIBLE);
-            } else {
+            }else{
                 textNotice.setVisibility(View.INVISIBLE);
                 nothingHereIcon.setVisibility(View.INVISIBLE);
-                Toast.makeText(this, "Operation Success", Toast.LENGTH_LONG).show();
+                Toast.makeText(this , "Operation Success", Toast.LENGTH_LONG).show();
             }
 
             mRecyclerView.setAdapter(mAdapter);
@@ -102,7 +102,7 @@ public class DealDisplayActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
+        switch(item.getItemId()) {
             case R.id.menu_item_dashboard:
                 Intent menuDashBoardIntent = new Intent(this, DashBoardActivity.class);
                 startActivity(menuDashBoardIntent);

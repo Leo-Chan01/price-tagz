@@ -6,18 +6,7 @@ import android.os.Parcelable;
 import java.util.List;
 
 public class StockInfo implements Parcelable {
-
-    public static final Creator<StockInfo> CREATOR = new Creator<StockInfo>() {
-        @Override
-        public StockInfo createFromParcel(Parcel in) {
-            return new StockInfo(in);
-        }
-
-        @Override
-        public StockInfo[] newArray(int size) {
-            return new StockInfo[size];
-        }
-    };
+    
     private String name;
     private String description;
     private String price;
@@ -33,6 +22,18 @@ public class StockInfo implements Parcelable {
         description = in.readString();
         price = in.readString();
     }
+
+    public static final Creator<StockInfo> CREATOR = new Creator<StockInfo>() {
+        @Override
+        public StockInfo createFromParcel(Parcel in) {
+            return new StockInfo(in);
+        }
+
+        @Override
+        public StockInfo[] newArray(int size) {
+            return new StockInfo[size];
+        }
+    };
 
     public String getName() {
         return name;
@@ -58,7 +59,7 @@ public class StockInfo implements Parcelable {
         this.price = price;
     }
 
-    public int newNotePosition(List<StockInfo> stockInfos) {
+    public int newNotePosition(List<StockInfo> stockInfos){
         return stockInfos.size();
     }
 

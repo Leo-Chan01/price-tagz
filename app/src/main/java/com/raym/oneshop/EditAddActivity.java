@@ -19,8 +19,8 @@ import java.util.List;
 
 public class EditAddActivity extends AppCompatActivity {
 
-    public final String PREVIOUS_STOCK_INFOS = "com.example.oneshop.PREVIOUS_STOCK_INFOS";
     public List<StockInfo> mStockInfos = new ArrayList<>();
+    public final String PREVIOUS_STOCK_INFOS = "com.example.oneshop.PREVIOUS_STOCK_INFOS";
     public List<StockInfo> mFreshStockInfoList = new ArrayList<>();
 
     @Override

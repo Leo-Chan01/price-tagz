@@ -15,22 +15,21 @@ import java.util.List;
 
 //This class contains the code to use an adapter with a recycler view to show the
 //info added
-public class DealDisplayAdapter extends RecyclerView.Adapter<DealDisplayAdapter.DealDisplayViewHolder> {
+public class DealDisplayAdapter  extends RecyclerView.Adapter<DealDisplayAdapter.DealDisplayViewHolder> {
 
-    //    private final StockInfo mStockInfo;
-    private final List<StockInfo> mStockInfoList;
+//    private final StockInfo mStockInfo;
+    private List<StockInfo> mStockInfoList;
     private int mCurrentPosition;
 
     public DealDisplayAdapter(List<StockInfo> stockInfoList) {
         mStockInfoList = stockInfoList;
 //        mCurrentPosition = position;
     }
-
     @NonNull
     @Override
     public DealDisplayViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Context context = parent.getContext();
-        View itemView = LayoutInflater.from(context).inflate(R.layout.deal_list_item, parent, false);
+        View itemView = LayoutInflater.from(context).inflate(R.layout.deal_list_item, parent,false);
         return new DealDisplayViewHolder(itemView);
     }
 
@@ -49,7 +48,7 @@ public class DealDisplayAdapter extends RecyclerView.Adapter<DealDisplayAdapter.
     }
 
     //this is the viewHolder class, it works with the recycler view to hold the views and cache them
-    public static class DealDisplayViewHolder extends RecyclerView.ViewHolder {
+    public static class DealDisplayViewHolder extends RecyclerView.ViewHolder{
         //we use this variable to find the view in our code that was created in the layout file
         //in this case, the view in our list item is a TextView so we would find the view first,
         //then we would  bind the data to the text view from the list Item which is deal_item

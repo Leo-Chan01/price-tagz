@@ -1,4 +1,4 @@
-package com.example.oneshop;
+package com.raym.oneshop;
 
 import org.junit.Test;
 

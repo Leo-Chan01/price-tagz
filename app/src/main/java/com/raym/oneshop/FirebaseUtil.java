@@ -11,11 +11,10 @@ public class FirebaseUtil {
     public static ArrayList<StockInfo> sStockInfos;
     private static FirebaseUtil mFirebaseUtil;
 
-    private FirebaseUtil() {
-    }
+    private FirebaseUtil(){}
 
-    public static void firebaseRef(String reference) {
-        if (mFirebaseUtil == null) {
+    public static void firebaseRef (String reference){
+        if (mFirebaseUtil == null){
             mFirebaseUtil = new FirebaseUtil();
             sStockInfos = new ArrayList<StockInfo>();
             mFirebaseDatabase = FirebaseDatabase.getInstance();
